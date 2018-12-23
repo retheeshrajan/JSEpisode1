@@ -58,6 +58,7 @@ function squareOrDouble(n) {
  * - assume all civilIDs will be valid
  *
  * Hint: you can use JavaScript's Date() class to make things easier
+ * (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
  *
  * e.g. (if we assume that the date today is September 23 2018):
  *    ageFromCivilID(287050612345) -> 31

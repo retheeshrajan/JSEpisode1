@@ -87,7 +87,10 @@ function ageFromCivilID(civilID) {
 
   let age = today.getFullYear() - dob.getFullYear();
 
-  if (dob.getMonth() > today.getMonth()) {
+  if (
+    dob.getMonth() > today.getMonth() ||
+    (dob.getMonth() === today.getMonth() && dob.getDate() >= today.getDate())
+  ) {
     age--;
   }
 

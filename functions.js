@@ -6,6 +6,11 @@
  */
 function greet(name) {
   // Your code here
+  if(name){
+    console.log(`Hello ${name}`);
+  }else{
+    console.log("Hello");
+  }
 }
 
 /**
@@ -15,6 +20,11 @@ function greet(name) {
  */
 function isOdd(n) {
   // Your code here
+  if(n%2!==0){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 /**
@@ -30,6 +40,11 @@ function isOdd(n) {
  */
 function oddsSmallerThan(n) {
   // Your code here
+  if (n%2===0){
+    return (n/2);
+  }else{
+    return (n-1)/2;
+  }
 }
 
 /**
@@ -44,8 +59,13 @@ function oddsSmallerThan(n) {
  */
 function squareOrDouble(n) {
   // Your code here
+  if (n%2===0){
+    return (n*2);
+  }else{
+    return Math.pow(n,2);
+  }
 }
-
+console.log(squareOrDouble(6));
 /**
  * ageFromCivilID(civilID):
  * - receives a civilID as a STRING of the form <CYYMMDDXXXXX>
@@ -66,8 +86,15 @@ function squareOrDouble(n) {
  */
 function ageFromCivilID(civilID) {
   // Your code here
+  let yr=civilID.substr(1,2)
+  let mn=civilID.substr(3,2)
+  let dy=civilID.substr(5,2)
+  var mydate = new Date(yr + '-' + mn + '-' + dy);
+  var ageDifMs = Date.now() - mydate.getTime();
+  var ageDate = new Date(ageDifMs); // miliseconds from epoch
+  return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
-
+console.log(ageFromCivilID('280030205997'));
 /**
  * canVoteInKuwait(civilID, isKuwaiti, isRoyal):
  * - receives a civilID as a STRING

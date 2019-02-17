@@ -70,7 +70,7 @@ describe("squareOrDouble(n)", () => {
   });
 });
 
-describe("ageFromCivilID(civilID)", () => {
+xdescribe("ageFromCivilID(civilID)", () => {
   test("returns the correct age", () => {
     const civilIDs = ["287060512345", "285082712345", "298060512345"];
     const dates = ["06/05/1987", "08/27/1985", "06/05/1998"];
@@ -127,7 +127,7 @@ describe("ageFromCivilID(civilID)", () => {
   });
 });
 
-describe("canVoteInKuwait(civilID, isKuwaiti, isRoyal)", () => {
+xdescribe("canVoteInKuwait(civilID, isKuwaiti, isRoyal)", () => {
   test("returns false if the age is under 21", () => {
     let year = (new Date().getFullYear() - 18) % 100;
     const civilID = `3${year < 10 ? `0${year}` : year}010512345`;
